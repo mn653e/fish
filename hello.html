@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>The CEO of Gefilte Fish</title>
+    <style>
+      #ceo-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+      }
+      #history-image {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="https://i.imgur.com/JY9z8id.jpg" alt="Gefilte Fish" id="history-image">
+    <img src="https://i.imgur.com/U3EVmW0.png" alt="The CEO of Gefilte Fish" id="ceo-image">
+    <h1>The CEO of Gefilte Fish</h1>
+    <h2>History of Gefilte Fish</h2>
+    <p>
+      Gefilte fish has a long history in Ashkenazi Jewish cuisine, dating back to medieval Germany. It was originally created as a way to use the cheaper, bony parts of the fish, and to stretch the ingredients to feed more people. The dish was traditionally served during special occasions such as Passover and Shabbat, and remains a popular dish in Ashkenazi Jewish communities today.
+    </p>
+    <p>
+      Over time, the dish has evolved and taken on different forms in different regions. In Eastern Europe, for example, the fish was often formed into balls and served in a clear broth, while in Western Europe it was often served in a sweet and sour sauce. Today, gefilte fish can be found in many variations, including gluten-free and vegetarian options, and continues to be an important part of Ashkenazi Jewish cultural and culinary heritage.
+    </p>
+  </body>
+  <script>
+    const image = document.getElementById("ceo-image");
+    let x = 0;
+    let y = 0;
+    let xSpeed = 5;
+    let ySpeed = 5;
+    
+    setInterval(() => {
+      x += xSpeed;
+      y += ySpeed;
+      if (x + image.offsetWidth > window.innerWidth || x < 0) {
+        xSpeed = -xSpeed;
+      }
+      if (y + image.offsetHeight > window.innerHeight || y < 0) {
+        ySpeed = -ySpeed;
+      }
+      image.style.left = x + "px";
+      image.style.top = y + "px";
+    }, 50);
+  </script>
+</html>
