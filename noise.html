@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .lever-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        width: 500px;
+        background-color: #5DADE2;
+        border-radius: 100px;
+        cursor: pointer;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+      }
+      h2 {
+        font-size: 36px;
+        color: white;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lever-button">
+      <h2>Make Noise</h2>
+    </div>
+    <audio id="sound">
+      <source src="https://audio.jukehost.co.uk/r1FA42x2Tj5bxYtV12Gx0GLM3TwaA7gR" type="audio/mpeg">
+    </audio>
+    <script>
+      const leverButton = document.querySelector('.lever-button');
+      const sound = document.getElementById('sound');
+      leverButton.addEventListener('click', function() {
+        sound.play();
+      });
+    </script>
+  </body>
+</html>
